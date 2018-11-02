@@ -1,0 +1,30 @@
+{
+  "name": "resumebuilder",
+  "version": "1.0.0",
+  "description": "a resume builder application",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TechOUs/review-builder-node.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "ejs"
+  ],
+  "author": "Aniket Batabyal (anarchymonkey)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TechOUs/review-builder-node/issues"
+  },
+  "homepage": "https://github.com/TechOUs/review-builder-node#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "mongoose": "^5.3.8"
+  }
+}
