@@ -1,10 +1,89 @@
-<% include partials/header.ejs %>
+<% include partials/renderResumeHeader.ejs %>
 
-  <h1> Name : <%=name %> </h1>
-  <h1> Phone : <%= phone %> </h1>
-  <h1> Email : <%= email %> </h1>
-  <h1> Educational Qualification : <%= edu%> </h1>
-  <h1> Personal Skills : <%= skills %> </h1>
-  <h1> Hobbies : <%= hobbies %> </h1>
-  <h1> Experience : <%= experience %> </h1>
-<% include partials/footer.ejs %>
+
+<div id="cv" class="instaFade">
+	<div class="mainDetails">
+		<div id="headshot" class="quickFade">
+			<img src="<%= image %>" alt="<%= name %>" />
+		</div>
+
+		<div id="name">
+			<h1 class="quickFade delayTwo">TechOus Community</h1>
+			<h2 class="quickFade delayThree">Open Organization for github</h2>
+		</div>
+
+		<div id="contactDetails" class="quickFade delayFour">
+			<ul>
+				<li>e: <a href="#" target="_blank"><%=email %></a></li>
+				<li>w: <a href="https://techous.github.io/">https://techous.github.io</a></li>
+				<li>p: <%=phone%></li>
+			</ul>
+		</div>
+		<div class="clear"></div>
+	</div>
+
+	<div id="mainArea" class="quickFade delayFive">
+		<section>
+			<article>
+				<div class="sectionTitle">
+					<h1><%= name %> Profile</h1>
+				</div>
+
+				<div class="sectionContent">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dolor metus, interdum at scelerisque in, porta at lacus. Maecenas dapibus luctus cursus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies massa et erat luctus hendrerit. Curabitur non consequat enim. Vestibulum bibendum mattis dignissim. Proin id sapien quis libero interdum porttitor.</p>
+				</div>
+			</article>
+			<div class="clear"></div>
+		</section>
+
+
+		<section>
+			<div class="sectionTitle">
+				<h1>Work Experience</h1>
+			</div>
+
+			<div class="sectionContent">
+				<article>
+					<h2><%= experience %></h2>
+					<p class="subDetails">April 2011 - Present</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies massa et erat luctus hendrerit. Curabitur non consequat enim. Vestibulum bibendum mattis dignissim. Proin id sapien quis libero interdum porttitor.</p>
+				</article>
+      </div>
+			<div class="clear"></div>
+		</section>
+
+
+		<section>
+			<div class="sectionTitle">
+				<h1>Key Skills</h1>
+			</div>
+
+			<div class="sectionContent">
+			     <ul class="keySkills">
+						 <% for(var i = 0 ; i < skillsarr.length ; i++){%>
+					<li><%= skillsarr[i] %></li>
+					<% } %>
+				</ul>
+			</div>
+			<div class="clear"></div>
+		</section>
+
+
+		<section>
+			<div class="sectionTitle">
+				<h1>Education</h1>
+			</div>
+
+			<div class="sectionContent">
+				<article>
+					<h2>College/University</h2>
+					<p class="subDetails"><%= edu %></p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies massa et erat luctus hendrerit. Curabitur non consequat enim.</p>
+				</article>
+      </div>
+			<div class="clear"></div>
+		</section>
+
+	</div>
+</div>
+<% include partials/renderResumeFooter.ejs %>
