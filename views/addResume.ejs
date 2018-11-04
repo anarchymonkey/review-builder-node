@@ -2,7 +2,7 @@
 
 <h1> Hey <%= username %> Let's Create your resume </h1>
 
-<form class="form" action="/add" method="post">
+<form class="form" action="/view" method="post">
   <div class="container-fluid">
   <div class = "form-group">
    <label for="name">Name:</label>
@@ -32,6 +32,7 @@
                     <label for="experience">Experience:</label>
                     <input class="form-control" type="text" name="experience" id="experience" placeholder="enter your work experience with commas ">
                     </div>
+                    <<button type="submit" name="submit" onclick="window.location.href='/view'">submit</button>
 </div>
       </form>
 <% include partials/footer.ejs %>
