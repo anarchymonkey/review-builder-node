@@ -3,10 +3,8 @@ var express = require('express');
 var router = express.Router();
 /* end of important require and router lines */
 
-/* get resume page form */
-
 router.get('/',function(req,res){
-  res.render('addResume',{username : 'Aniket'});
-});
-
+  res.render("addResume",{username:'Aniket'});
+  res.redirect('/view');
+  });
 module.exports = router; // this code is essential and has to be kept same, cause express-generator needs it.
