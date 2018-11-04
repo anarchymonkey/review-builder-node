@@ -6,7 +6,7 @@ var router = express.Router();
 /* get resume page form */
 
 router.get('/',function(req,res){
-  res.render('addResume');
+  res.render('addResume',{username : 'Aniket'});
 });
 
 module.exports = router; // this code is essential and has to be kept same, cause express-generator needs it.

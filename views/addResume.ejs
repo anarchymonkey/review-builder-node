@@ -1,10 +1,37 @@
 <% include partials/header.ejs %>
 
-<h1> hey this is the add Resume page </h1>
+<h1> Hey <%= username %> Let's Create your resume </h1>
 
-<p> it will consist of </p>
-
-<ul>
-  <li> a form <li>
-    </ul>
+<form class="form" action="/add" method="post">
+  <div class="container-fluid">
+  <div class = "form-group">
+   <label for="name">Name:</label>
+    <input class="form-control" type="text" name="name" id="name" placeholder="enter your name" required>
+    </div>
+      <div class="form-group">
+        <label for="phone">Phone:</label>
+        <input class="form-control" type="phone" name="phone" id="phone" placeholder="enter your phone number" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input class="form-control" type="email" name="email" id="email" placeholder="enter your email address" required>
+          </div>
+        <div class="form-group">
+          <label for="edu-quali">Educational Qualification:</label>
+          <input class="form-control" type="text" name="education" id="edu-quali" placeholder="enter your educational-qualification with commas" required>
+          </div>
+            <div class="form-group">
+              <label for="skills">Skills:</label>
+              <input class="form-control" type="text" name="skills" id="skills" placeholder="enter your skills with commas" required>
+              </div>
+                <div class="form-group">
+                  <label for="hobbies">Hobbies:</label>
+                  <input class="form-control" type="text" name="hobbies" id="hobbies" placeholder="enter your hobbbies with commas" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="experience">Experience:</label>
+                    <input class="form-control" type="text" name="experience" id="experience" placeholder="enter your work experience with commas ">
+                    </div>
+</div>
+      </form>
 <% include partials/footer.ejs %>
