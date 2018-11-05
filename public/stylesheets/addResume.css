@@ -2,3 +2,12 @@ h1
 {
   text-align: center;
 }
+
+.avatar
+{
+  width : 5%;
+  border-radius: 50%;
+  flex: auto;
+  flex-wrap: nowrap;
+  float: inherit;
+}

@@ -1,6 +1,13 @@
+<% include partials/header.ejs %>
 <h1> The users are </h1>
 
 <% for(var i = 0 ; i < resume.length ; i++){ %>
-  <%= resume[i]['name'] %>
-  <a href="/view/<%=resume[i]._id%>">view resume </a>
+  <ul>
+
+  <li>
+    <img class="avatar" src="<%= resume[i]['image']%>" alt="<%= resume[i]['name']%>">
+  <h4>  <%= resume[i]['name'] %> <p><button class="btn btn-primary btn-large" onclick='window.location.href="/view/<%=resume[i]._id%>"'> view resume </button></p></h4>
+  </li>
+  </ul>
 <%}%>
+<% include partials/footer.ejs %>
