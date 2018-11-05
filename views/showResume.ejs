@@ -1,0 +1,6 @@
+<h1> The users are </h1>
+
+<% for(var i = 0 ; i < resume.length ; i++){ %>
+  <%= resume[i]['name'] %>
+  <a href="/view/<%=resume[i]._id%>">view resume </a>
+<%}%>
