@@ -4,7 +4,7 @@
 <div id="cv" class="instaFade">
 	<div class="mainDetails">
 		<div id="headshot" class="quickFade">
-			<img src="<%= image %>" alt="<%= name %>" />
+			<img src="<%= resume.image %>" alt="<%= resume.name %>" />
 		</div>
 
 		<div id="name">
@@ -14,9 +14,9 @@
 
 		<div id="contactDetails" class="quickFade delayFour">
 			<ul>
-				<li>e: <a href="#" target="_blank"><%=email %></a></li>
+				<li>e: <a href="#" target="_blank"><%=resume.email %></a></li>
 				<li>w: <a href="https://techous.github.io/">https://techous.github.io</a></li>
-				<li>p: <%=phone%></li>
+				<li>p: <%=resume.phone%></li>
 			</ul>
 		</div>
 		<div class="clear"></div>
@@ -26,7 +26,7 @@
 		<section>
 			<article>
 				<div class="sectionTitle">
-					<h1><%= name %> Profile</h1>
+					<h1><%= resume.name %> Profile</h1>
 				</div>
 
 				<div class="sectionContent">
@@ -44,7 +44,7 @@
 
 			<div class="sectionContent">
 				<article>
-					<h2><%= experience %></h2>
+					<h2><%= resume.experience %></h2>
 					<p class="subDetails">April 2011 - Present</p>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies massa et erat luctus hendrerit. Curabitur non consequat enim. Vestibulum bibendum mattis dignissim. Proin id sapien quis libero interdum porttitor.</p>
 				</article>
@@ -60,9 +60,7 @@
 
 			<div class="sectionContent">
 			     <ul class="keySkills">
-						 <% for(var i = 0 ; i < skillsarr.length ; i++){%>
-					<li><%= skillsarr[i] %></li>
-					<% } %>
+						 <%= resume.skills %>
 				</ul>
 			</div>
 			<div class="clear"></div>
@@ -77,7 +75,7 @@
 			<div class="sectionContent">
 				<article>
 					<h2>College/University</h2>
-					<p class="subDetails"><%= edu %></p>
+					<p class="subDetails"><%= resume.edu %></p>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies massa et erat luctus hendrerit. Curabitur non consequat enim.</p>
 				</article>
       </div>
