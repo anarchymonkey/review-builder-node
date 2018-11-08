@@ -3,4 +3,9 @@ body {
   margin: 0 auto;
   padding: 0;
   text-align: center;
+  background-image: url('../images/backImg.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: round;
+  background-size: cover;
 }

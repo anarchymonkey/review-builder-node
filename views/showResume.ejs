@@ -1,13 +1,12 @@
 <% include partials/header.ejs %>
 <h1> The users are </h1>
-
+<div class="row" style="display : flex;">
 <% for(var i = 0 ; i < resume.length ; i++){ %>
-  <ul>
 
-  <li>
-    <img class="avatar" src="<%= resume[i]['image']%>" alt="<%= resume[i]['name']%>">
-  <h4>  <%= resume[i]['name'] %> <p><button class="btn btn-primary btn-large" onclick='window.location.href="/view/<%=resume[i]._id%>"'> view resume </button></p></h4>
-  </li>
-  </ul>
+     <div class="col-md-4 col-sm-6">
+     <img class="avatar thumbnail" src="<%= resume[i]['image']%>" alt="<%= resume[i]['name']%>">
+     <figcaption>  <%= resume[i]['name'] %></figcaption><button class="btn btn-primary btn-large" onclick='window.location.href="/view/<%=resume[i]._id%>"'> view resume </button>
+   </div>
 <%}%>
+</div>
 <% include partials/footer.ejs %>
