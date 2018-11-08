@@ -1,7 +1,7 @@
 # review-builder-node
 A simple application using node js which builds resume for all the students
 
-* try the blueprint version on resume-builder-1.herokuapp.com
+## try the blueprint version on resume-builder-1.herokuapp.com
 
 ## Creators/Contributers
 * Nidhi Mittal
