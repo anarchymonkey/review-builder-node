@@ -4,7 +4,7 @@ var router = express.Router();
 /* end of important require and router lines */
 
 router.get('/',function(req,res){
-  res.render("addResume",{username:'Aniket'});
+  res.render("addResume");
   res.redirect('/view');
   });
 module.exports = router; // this code is essential and has to be kept same, cause express-generator needs it.
