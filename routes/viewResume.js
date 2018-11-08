@@ -15,22 +15,7 @@ var skillarr;
 
 /* connections and schemas */
 
-mongoose.connect('mongodb://anarchymonkey:Aniket1996@ds151453.mlab.com:51453/resume',{ useNewUrlParser: true });
-
-let dbSchema = new mongoose.Schema({
-
-  name : String,
-  phone : String,
-  email : String ,
-  edu : String ,
-  skills : String,
-  hobbies : String,
-  experience : String,
-  image : String ,
-
-});
-
-let dbModel = mongoose.model('resume',dbSchema);
+let dbModel = require('../models/resumeDb.js'); // found in the models folder
 
 /* ************************************* */
 router.post('/',function(req,res){
@@ -53,7 +38,7 @@ let newUser = {
                           hobbies:hobbies,
                           experience:experience,
                           image:image
-                        };
+              };
 
     dbModel.create(newUser,function(err,body){
 
@@ -92,7 +77,7 @@ router.get('/:id',function(req,res){
      {
        res.render('viewResume',{resume:resume});
      }
-   })
-})
+   });
+});
 
 module.exports = router;

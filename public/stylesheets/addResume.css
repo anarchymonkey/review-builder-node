@@ -5,9 +5,5 @@ h1
 
 .avatar
 {
-  width : 5%;
-  border-radius: 50%;
-  flex: auto;
-  flex-wrap: nowrap;
-  float: inherit;
+  width: 60%;
 }
