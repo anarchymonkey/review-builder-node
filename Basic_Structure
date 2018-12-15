@@ -1,0 +1,8 @@
+- make a project folder
+- install node and express
+- create subfolders - bin,routes,controllers,models,public,views
+- in bin we will have "www" file
+- in routes -"index.js" file containing routes
+- routes will go to controlles which inturn contains ".js" files
+-in views we have ejs/pug templates
+-in public we have "css","img","js" subfolders.
