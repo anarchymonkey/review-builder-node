@@ -5,6 +5,5 @@ var router = express.Router();
 
 router.get('/',function(req,res){
   res.render("addResume");
-  res.redirect('/view');
   });
 module.exports = router; // this code is essential and has to be kept same, cause express-generator needs it.
